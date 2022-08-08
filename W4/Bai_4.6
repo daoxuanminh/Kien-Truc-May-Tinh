@@ -1,0 +1,6 @@
+.text
+	# lệnh addiu khi chạy bị chia thành 3 lệnh con lui, ori, addu
+	addu $t0, $zero, 60000
+	ori $t0, $zero, 60000
+	# lệnh ori chạy nhanh hơn lệnh addiu với kết quả chạy hoàn toàn giống nhau
+	# Vì giá trị 60000 đã gần vượt qua 16 bit nên máy đã làm thêm thao tác chuyển số 16 bit sang 32 bit

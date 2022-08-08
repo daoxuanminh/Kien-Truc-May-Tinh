@@ -1,0 +1,1 @@
+%# la label được dịch thành 2 lệnh load 4 byte cao và 4 byte thấp của nhãn lần lượt vào thanh ghi

@@ -1,0 +1,10 @@
+.text
+	li $s0,-11
+	# abs $s0,s1
+	xor $s0,0xffff
+	addi $s0,$s0,1
+	# move $s1,$s0
+	add $s1,$zero,$s1
+	# not $s0
+	xor $s0,0xffffffff
+	
