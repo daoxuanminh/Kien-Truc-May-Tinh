@@ -14,9 +14,7 @@ PromptInt:
 	li $v0,5
 	syscall
 	jr $ra
-	#nop
- #____________________________________________
-.text
+#_________________________________________________________
 PrintNewLine:
 	li $v0,4
 	la $a0,_PNL_newline
@@ -25,14 +23,14 @@ PrintNewLine:
 .data
  _PNL_newline: .asciiz "\n"
  #____________________________________________
- .text 
- PrintTab:
-	li $v0,4
-	la $a0,tab
-	syscall
-	jr $ra
-.data
-	tab: .asciiz "\t"
+# .text 
+ #PrintTab:
+#	li $v0,4
+#	la $a0,tab
+#	syscall
+#	jr $ra
+#.data
+#	tab: .asciiz "\t "
 #______________________________________________
  .text
  PrintString:

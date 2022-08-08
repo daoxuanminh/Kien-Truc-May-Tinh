@@ -3,7 +3,7 @@
  	array: .word 0, 1, 2, 3, 4, 5, 6, 7
 .text
 	li $s1, 0x00000000  
-	li $s3, 0x00000007
+	li $s3, 0x00000005
 	li $s4, 0x00000001  
 	li $s5, 0x00000000
 	la $s2, array
@@ -16,8 +16,18 @@ loop:
 	add $t1, $t1, $s2		# t1 store the address of A[i]
 	lw $t0, 0($t1)			# load value of A[i] in $t0
 	add $s5, $s5, $t0		# sum = sum + A[i]
-	bne $s1, $s3, loop 		# if i != n, goto loop
 	
+#	bne $s1, $s3, loop 		# if i != n, goto loop
+	
+#	blt $s1, $s3, loop		# if i < n, goto loop
+
+#	ble $s1, $s3, loop		# if i <= n, goto loop
+
+#	bge $s5, $zero, loop		# if sum >= 0, goto loop
+
+#	beq $t0, $zero, loop 		# if A[i] == 0, goto loop
+
+
 end:
 	la $a0, result1
 	li $v0, 4
